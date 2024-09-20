@@ -15,10 +15,6 @@ const nextConfig = {
         hostname: "shared.akamai.steamstatic.com",
         port: "",
       },
-      {
-        hostname: "example.com",
-        port: "",
-      },
     ],
   },
   // disable browser source maps in production

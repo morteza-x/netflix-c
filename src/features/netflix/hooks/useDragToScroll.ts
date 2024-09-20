@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 
-const useDragToScroll = (rowRef: React.RefObject<HTMLDivElement>) => {
+const useDragToScroll = (
+  rowRef: React.RefObject<HTMLDivElement>,
+  setIsScrolled: any
+) => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -21,6 +24,8 @@ const useDragToScroll = (rowRef: React.RefObject<HTMLDivElement>) => {
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
+    setIsScrolled(true);
+
     console.log(e.pageX, rowRef.current?.offsetLeft);
     const x = e.pageX - (rowRef.current?.offsetLeft || 0);
     const walk = (x - startX) * 6; // Adjust the scroll speed here

@@ -32,7 +32,7 @@ const Row = ({ title, data }: { title: string; data: TMovie[] }) => {
     handleMouseLeave,
     handleMouseUp,
     handleMouseMove,
-  } = useDragToScroll(rowRef);
+  } = useDragToScroll(rowRef, setIsScrolled);
 
   return (
     <div

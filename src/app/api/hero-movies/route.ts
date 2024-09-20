@@ -15,8 +15,7 @@ export async function GET(request: NextRequest) {
       year: 2011,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/ss_6a4f5afdaa98402de9cf0b59fed27bab3256a6f4.1920x1080.jpg?t=1725487730",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/header.jpg?t=1725487730",
+      poster: "/posters/portal2.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/5787/movie480.webm?t=1682715616",
       description:
@@ -29,8 +28,7 @@ export async function GET(request: NextRequest) {
       year: 2015,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ss_5710298af2318afd9aa72449ef29ac4a2ef64d8e.1920x1080.jpg?t=1726045366",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1726045366",
+      poster: "/posters/witcher3.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256927226/movie480_vp9.webm?t=1674829926",
       description:
@@ -43,8 +41,7 @@ export async function GET(request: NextRequest) {
       year: 2015,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239140/ss_a3771358b8eb4ea4c8f99c5850711f55b87804de.1920x1080.jpg?t=1724252444",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239140/header.jpg?t=1724252444",
+      poster: "/posters/dying-light.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/257022021/movie480_vp9.webm?t=1715275593",
       description:
@@ -57,8 +54,7 @@ export async function GET(request: NextRequest) {
       year: 2016,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/ss_9ac899fe2cda15d48b0549bba77ef8c4a090a71c.1920x1080.jpg?t=1711128146",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1711128146",
+      poster: "/posters/stardew.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256660296/movie480.webm?t=1454099186",
       description:
@@ -71,8 +67,7 @@ export async function GET(request: NextRequest) {
       year: 2017,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.1920x1080.jpg?t=1709068852",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg?t=1709068852",
+      poster: "/posters/cuphead.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256894191/movie480_vp9.webm?t=1656595223",
       description:
@@ -85,8 +80,7 @@ export async function GET(request: NextRequest) {
       year: 2018,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/ss_4b0f0222341b64a37114033aca9994551f27c161.1920x1080.jpg?t=1714089525",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg?t=1714089525",
+      poster: "/posters/celeste.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256706951/movie480.webm?t=1516898311",
       description:
@@ -99,8 +93,7 @@ export async function GET(request: NextRequest) {
       year: 2018,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/ss_668dafe477743f8b50b818d5bbfcec669e9ba93e.1920x1080.jpg?t=1720558643",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643",
+      poster: "/posters/red-dead.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256768371/movie480.webm?t=1574881352",
       description:
@@ -113,8 +106,7 @@ export async function GET(request: NextRequest) {
       year: 2019,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_8376498631b089e52fb5c75ffe119e0de5e6aed1.1920x1080.jpg?t=1726554320",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/header.jpg?t=1726554320",
+      poster: "/posters/control.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256795678/movie480_vp9.webm?t=1599146473",
       description:
@@ -127,8 +119,7 @@ export async function GET(request: NextRequest) {
       year: 2019,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/ss_f64a1140651ff5af30eb63bb6e5b41753d00a98e.1920x1080.jpg?t=1725036030",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/header.jpg?t=1725036030",
+      poster: "/posters/death.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256878920/movie480_vp9.webm?t=1683196663",
       description:
@@ -141,8 +132,7 @@ export async function GET(request: NextRequest) {
       year: 2020,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_4eb068b1cf52c91b57157b84bed18a186ed7714b.1920x1080.jpg?t=1726188854",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg?t=1726188854",
+      poster: "/posters/cyber.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256987121/movie480_vp9.webm?t=1701872779",
       description:
@@ -155,8 +145,7 @@ export async function GET(request: NextRequest) {
       year: 2020,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/ss_68300459a8c3daacb2ec687adcdbf4442fcc4f47.1920x1080.jpg?t=1715722799",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1715722799",
+      poster: "/posters/hades.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256801252/movie480_vp9.webm?t=1600353465",
       description:
@@ -169,8 +158,7 @@ export async function GET(request: NextRequest) {
       year: 2021,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/ss_a15164ddd357ab3c0b2aff575a6b215b2d91b406.1920x1080.jpg?t=1725585631",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header.jpg?t=1725585631",
+      poster: "/posters/takes-two.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256827093/movie480_vp9.webm?t=1616514535",
       description:
@@ -185,8 +173,7 @@ export async function GET(request: NextRequest) {
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1196590/ss_8113ec993ec474055c4cdce5ee86f91f7cf6663f.1920x1080.jpg?t=1719197703",
       poster:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1196590/header.jpg?t=1719197703",
-      trailer:
-        "https://video.akamai.steamstatic.com/store_trailers/256825282/movie480_vp9.webm?t=1615523833",
+      trailer: "/posters/village.webp",
       description:
         "Survive in a creepy village filled with monsters and uncover the dark secrets behind the sinister forces controlling the area.",
       rating: 85,
@@ -197,8 +184,7 @@ export async function GET(request: NextRequest) {
       year: 2022,
       image:
         "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_943bf6fe62352757d9070c1d33e50b92fe8539f1.1920x1080.jpg?t=1726158298",
-      poster:
-        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1726158298",
+      poster: "/posters/ring.webp",
       trailer:
         "https://video.akamai.steamstatic.com/store_trailers/256889456/movie480_vp9.webm?t=1654109241",
       description:

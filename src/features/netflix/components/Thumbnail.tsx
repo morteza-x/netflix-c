@@ -8,7 +8,7 @@ import Trailer from "./Trailer";
 import { useState } from "react";
 const Thumbnail = ({ item }: { item: TMovie }) => {
   const { modalOn } = useBaseModal();
-  const [fallback, setFallback] = useState("/fallback.jpg");
+  const [srcImg, setSrcImg] = useState(item.poster);
 
   function openTrailerModal() {
     console.log("oepn");
@@ -18,11 +18,18 @@ const Thumbnail = ({ item }: { item: TMovie }) => {
   return (
     <div className="relative aspect-video flex-1 h-28 min-w-[180px] transition duration-200 md:h-36 md:min-w-[260px] md:hover:scale-105 #cursor-grab">
       <Image
-        src={item.poster || fallback}
+        src={srcImg}
         alt={item?.name}
         fill
         draggable={false}
         className="w-full object-cover rounded-sm md:rounded"
+        onError={() => setSrcImg("/fallback.jpg")}
+        onLoadingComplete={(result: any) => {
+          if (result.naturalWidth === 0) {
+            // Broken image
+            setSrcImg("/fallback.jpg");
+          }
+        }}
       />
 
       <div className={"absolute bottom-2 left-4"}>

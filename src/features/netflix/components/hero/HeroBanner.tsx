@@ -12,19 +12,25 @@ import { useState } from "react";
 const HeroBanner = ({ item }: { item: TMovie }) => {
   const { modalOn } = useBaseModal();
   function openTrailerModal() {
-    console.log("oepn");
     modalOn(<Trailer item={item} />, {});
   }
-  const [fallback, setFallback] = useState("/fallback.jpg");
+  const [imgSrc, setImgSrc] = useState(item.image);
 
   return (
     <div className="h-full flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end ld:pb-12">
       <div className="absolute top-0 left-0 -z-10 h-[95vh] w-screen">
         <Image
           className="w-full object-cover h-full"
-          src={item.image || fallback}
+          src={imgSrc}
           alt={item.name}
           fill
+          onError={() => setImgSrc("/fallback.jpg")}
+          onLoadingComplete={(result: any) => {
+            if (result.naturalWidth === 0) {
+              // Broken image
+              setImgSrc("/fallback.jpg");
+            }
+          }}
         />
       </div>
 
