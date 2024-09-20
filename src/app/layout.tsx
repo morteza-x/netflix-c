@@ -33,11 +33,12 @@ export default function RootLayout({
       <body
         //suppressHydrationWarning={true}
         className={twMerge(
-          "#bg-gray-900 #text-white antialiased font-lato overflow-x-hidden",
+          "bg-[#141414] antialiased font-lato overflow-x-hidden",
           lato.variable
         )}
         style={{
           height: "100%",
+          backgroundColor: "#141414",
         }}
       >
         <Providers>

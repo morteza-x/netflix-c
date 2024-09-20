@@ -1,16 +1,18 @@
-import helper from "@/utils/helper";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
-import Trending from "./components/trending/Trending";
-import { getMovies } from "./services/services";
-import Row from "./components/Row";
+import apis from "./services/apis";
 
 const fetchData = async () => {
-  const data = await getMovies();
-  return data;
+  const response = await fetch(`${apis.heroMovies}?count=5`, {
+    cache: "no-store",
+  });
+
+  const data = await response.json();
+  console.log("fetched movies: ", response.ok);
+  return data.data;
 };
 
-const NetflixScreen = async () => {
+export default async function NetflixScreen() {
   const movies = await fetchData();
 
   return (
@@ -21,6 +23,4 @@ const NetflixScreen = async () => {
       </main>
     </section>
   );
-};
-
-export default NetflixScreen;
+}

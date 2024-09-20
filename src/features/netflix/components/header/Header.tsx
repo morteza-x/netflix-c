@@ -31,7 +31,7 @@ const Header = () => {
     <header
       className={twMerge(
         "flex items-center fixed top-0 z-50 h-16 overflow-hidden w-full transition-all duration-500",
-        isScrolled ? "bg-gray-950/60" : "bg-transparent"
+        isScrolled ? "bg-gray-950/80" : "bg-transparent"
       )}
     >
       <div className="flex items-center justify-between container mx-auto px-4 ">

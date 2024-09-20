@@ -7,6 +7,7 @@ import { HiInformationCircle } from "react-icons/hi2";
 import { useBaseModal } from "@/__client/BaseModalProvider";
 import Trailer from "../Trailer";
 import { Tooltip } from "@chakra-ui/react";
+import { useState } from "react";
 
 const HeroBanner = ({ item }: { item: TMovie }) => {
   const { modalOn } = useBaseModal();
@@ -14,13 +15,14 @@ const HeroBanner = ({ item }: { item: TMovie }) => {
     console.log("oepn");
     modalOn(<Trailer item={item} />, {});
   }
+  const [fallback, setFallback] = useState("/fallback.jpg");
 
   return (
     <div className="h-full flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end ld:pb-12">
       <div className="absolute top-0 left-0 -z-10 h-[95vh] w-screen">
         <Image
           className="w-full object-cover h-full"
-          src={item.image}
+          src={item.image || fallback}
           alt={item.name}
           fill
         />

@@ -19,7 +19,7 @@ export const getMovies = async () => {
 export const getMoviesClient = async () => {
   try {
     const response = await fetch(`${apis.heroMoviesClient}?count=5`, {
-      cache: "no-store",
+      //cache: "no-store",
     });
     const data = await response.json();
 

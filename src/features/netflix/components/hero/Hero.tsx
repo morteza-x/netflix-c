@@ -11,45 +11,49 @@ const Hero = async ({ movies }: { movies: TMovie[] }) => {
       <main className="h-full relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
         {!movies?.length ? <></> : <HeroBanner item={movies[0]} />}
 
-        <div className="flex flex-col gap-10 md:gap-24">
-          <Row
-            title="Trending"
-            data={helper
-              .shuffleArray(movies)
-              .filter((_: any, index: number) => index < 10)}
-          />
+        {!movies?.length ? (
+          <></>
+        ) : (
+          <div className="flex flex-col gap-10 md:gap-24">
+            <Row
+              title="Trending"
+              data={helper
+                .shuffleArray(movies)
+                .filter((_: any, index: number) => index < 10)}
+            />
 
-          <Row
-            title="Top Ratings"
-            data={helper
-              .shuffleArray(movies)
-              .filter((_: any, index: number) => index < 10)}
-          />
-          <Row
-            title="Action"
-            data={helper
-              .shuffleArray(movies)
-              .filter((_: any, index: number) => index < 10)}
-          />
-          <Row
-            title="Horror"
-            data={helper
-              .shuffleArray(movies)
-              .filter((_: any, index: number) => index < 10)}
-          />
-          <Row
-            title="Romance"
-            data={helper
-              .shuffleArray(movies)
-              .filter((_: any, index: number) => index < 10)}
-          />
-          <Row
-            title="Comedy"
-            data={helper
-              .shuffleArray(movies)
-              .filter((_: any, index: number) => index < 10)}
-          />
-        </div>
+            <Row
+              title="Top Ratings"
+              data={helper
+                .shuffleArray(movies)
+                .filter((_: any, index: number) => index < 10)}
+            />
+            <Row
+              title="Action"
+              data={helper
+                .shuffleArray(movies)
+                .filter((_: any, index: number) => index < 10)}
+            />
+            <Row
+              title="Horror"
+              data={helper
+                .shuffleArray(movies)
+                .filter((_: any, index: number) => index < 10)}
+            />
+            <Row
+              title="Romance"
+              data={helper
+                .shuffleArray(movies)
+                .filter((_: any, index: number) => index < 10)}
+            />
+            <Row
+              title="Comedy"
+              data={helper
+                .shuffleArray(movies)
+                .filter((_: any, index: number) => index < 10)}
+            />
+          </div>
+        )}
       </main>
     </section>
   );

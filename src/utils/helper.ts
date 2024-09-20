@@ -22,7 +22,10 @@ let helper: THelper = {
     return uuidv4();
   },
 
-  shuffleArray(array): any {
+  shuffleArray(array: any[]): any {
+    // be sure an array is passed in
+    if (!Array.isArray(array)) return array;
+
     // copy the original array
     const copyArr = [...array];
     for (let i = copyArr.length - 1; i > 0; i--) {
@@ -30,7 +33,6 @@ let helper: THelper = {
       [copyArr[i], copyArr[j]] = [copyArr[j], copyArr[i]]; // Swap elements
     }
 
-    console.log("+===================", copyArr[0]?.name);
     return copyArr;
   },
 };

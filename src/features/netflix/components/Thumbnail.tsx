@@ -5,8 +5,10 @@ import { IconButton, Tooltip } from "@chakra-ui/react";
 import { useBaseModal } from "@/__client/BaseModalProvider";
 import { FaPlay } from "react-icons/fa";
 import Trailer from "./Trailer";
+import { useState } from "react";
 const Thumbnail = ({ item }: { item: TMovie }) => {
   const { modalOn } = useBaseModal();
+  const [fallback, setFallback] = useState("/fallback.jpg");
 
   function openTrailerModal() {
     console.log("oepn");
@@ -16,8 +18,8 @@ const Thumbnail = ({ item }: { item: TMovie }) => {
   return (
     <div className="relative aspect-video flex-1 h-28 min-w-[180px] transition duration-200 md:h-36 md:min-w-[260px] md:hover:scale-105 #cursor-grab">
       <Image
-        src={item.poster}
-        alt={item.name}
+        src={item.poster || fallback}
+        alt={item?.name}
         fill
         draggable={false}
         className="w-full object-cover rounded-sm md:rounded"
